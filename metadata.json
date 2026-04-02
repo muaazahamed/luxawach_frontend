@@ -1,0 +1,7 @@
+{
+  "name": "Luxa Wach",
+  "description": "A high-end horological e-commerce experience featuring exquisite timepieces, bespoke services, and an AI-powered concierge.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
