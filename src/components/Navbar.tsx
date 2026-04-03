@@ -7,6 +7,7 @@ import { useUser } from '../UserContext';
 import { useCart } from '../CartContext';
 import { useSiteConfig } from '../SiteConfigContext';
 import { getTokenRole, isTokenValid } from '../authToken';
+import luxaWatchLogo from '../assets/luxa-watch-logo.jpeg';
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -95,12 +96,16 @@ export const Navbar = () => {
         <Link
           to={hasToken ? dashboardPath : '/'}
           className={cn(
-            "relative md:absolute md:left-1/2 md:-translate-x-1/2 text-xl md:text-3xl font-bold tracking-tighter text-ink whitespace-nowrap z-10 px-2",
-            isHome ? "font-serif italic" : "font-sans",
-            "md:whitespace-normal"
+            'relative md:absolute md:left-1/2 md:-translate-x-1/2 z-10 px-2 inline-flex items-center justify-center'
           )}
         >
-          {header.logoText} <span className="text-gold">{header.logoAccent}</span>
+          <img
+            src={luxaWatchLogo}
+            alt="Luxa Watch logo"
+            className="w-[clamp(74px,19vw,188px)] h-auto object-contain"
+            decoding="async"
+            loading="eager"
+          />
         </Link>
 
         {/* Actions */}

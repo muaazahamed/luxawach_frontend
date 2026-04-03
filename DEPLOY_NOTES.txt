@@ -7,3 +7,4 @@ Set this env var in Netlify:
 VITE_API_BASE_URL=https://<your-render-backend>/api
 
 This package intentionally excludes server/, node_modules/, and .env files.
+Package refreshed on 2026-04-03.

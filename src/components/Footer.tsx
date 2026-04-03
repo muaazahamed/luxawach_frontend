@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Instagram, Twitter, Facebook, Mail, MapPin, Phone } from 'lucide-react';
 import { useSiteConfig } from '../SiteConfigContext';
+import luxaWatchLogo from '../assets/luxa-watch-logo.jpeg';
 
 export const Footer = () => {
   const { footer, header } = useSiteConfig();
@@ -27,8 +28,14 @@ export const Footer = () => {
       <div className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-20">
         {/* Brand */}
         <div className="space-y-8 md:space-y-10">
-          <Link to="/" className="text-2xl md:text-3xl font-bold tracking-tighter">
-            {header.logoText} {header.logoAccent}
+          <Link to="/" className="inline-flex items-center">
+            <img
+              src={luxaWatchLogo}
+              alt="Luxa Watch logo"
+              className="w-[clamp(120px,24vw,210px)] h-auto object-contain"
+              decoding="async"
+              loading="lazy"
+            />
           </Link>
           <p className="text-sm text-off-white/75 leading-relaxed max-w-xs">
             {footer.aboutText}
